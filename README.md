@@ -8,6 +8,7 @@ $ git clone https://github.com/haileysholty21/nwhl-fantasy-hockey
 $ cd nwhl-fantasy-hockey
 
 $ pipenv install
+(if you don't have pipenv installed, run $ pip install pipenv and then run the above line)
 
 $ createdb nwhl_fantasy_hockey
 
