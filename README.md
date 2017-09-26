@@ -11,6 +11,7 @@ $ pipenv install
 (if you don't have pipenv installed, run $ pip install pipenv and then run the above line)
 
 $ createdb nwhl_fantasy_hockey
+(make sure postgresql is running before you do the above command, otherwise it will error)
 
 $ python manage.py migrate
 $ python manage.py collectstatic
