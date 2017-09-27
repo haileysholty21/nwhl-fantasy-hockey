@@ -38,6 +38,11 @@ Your app should now be running on [localhost:5000](http://localhost:5000/).
 $ git add .
 $ git commit -am "<Write a useful message about your changes here>"
 $ git push heroku master
+(if the above push doesn't work because your local repository isn't up to date run $ git pull heroku master)
+$ git remote add origin https://github.com/haileysholty21/nwhl-fantasy-hockey.git
+$ git remote -v
+$ git push origin master 
+(if the above push doesn't work because your local repository isn't up to date run $ git pull origin master)
 ```
 
 ## Documentation
