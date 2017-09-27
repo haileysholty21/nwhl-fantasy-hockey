@@ -8,7 +8,9 @@ sudo easy_install pip
 If django isn't installed, run: 
 pip install django
 ```sh
+$ heroku login
 $ heroku git:clone -a nwhl-fantasy-hockey
+-- if it prompts you for a git username and password, use your Heroku email and the API key for your Heroku account, which you can find near the bottom of your Account settings page 
 $ cd nwhl-fantasy-hockey
 
 $ pipenv install
