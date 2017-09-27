@@ -36,7 +36,7 @@ Your app should now be running on [localhost:5000](http://localhost:5000/).
 
 ```sh
 $ git add .
-$ git commit -am "make it better"
+$ git commit -am "<Write a useful message about your changes here>"
 $ git push heroku master
 ```
 
