@@ -28,10 +28,10 @@ $ pip install -r requirements.txt
 -- dont run this yet, I haven't tried it out, and you can run locally without it -- $ createdb nwhl_fantasy_hockey
 (make sure postgresql is running before you do the above command, otherwise it will error)
 
--- only run the next two lines your local files have changed since the last time you ran it
+
 $ python manage.py migrate
 $ python manage.py collectstatic
---
+
 
 If using unix (a mac, for example), run the following to run the app locally:
 $ heroku local
@@ -58,8 +58,7 @@ $ git push origin master
 
 ## Making UI Changes
 
-To change the page that comes up, simply edit the index.html file located at nwhl-fantasy-hockey -> nwhl_fantasy -> templates 
-For more complex changes (adding static files such as images, linking pages, etc), google "How to do [ insert task here ] in Django" and it should help, or just ask me :)   
+The main HTML file (index.html) is in nwhl_fantasy/templates, and any additional html files should be added to that same templates folder. In your HTML files, when you want to refer to your CSS file(s) or any images, which should be added/kept in nwhl_fantasy_app/static (or nwhl_fantasy_app/static/images for images), the href should be formatted like href="{% static 'fantasyNWHL.css' %}" (example in the index.html file). As long as <% load static %> is included inside the opening HTML tag, Django will be able to find your CSS file or image and render it.
 
 
 ## Documentation
