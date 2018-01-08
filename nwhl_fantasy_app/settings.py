@@ -77,13 +77,22 @@ WSGI_APPLICATION = 'nwhl_fantasy_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd3nrn3nrmve4us',
+        'USER': 'dhqppbohhywbaj' ,
+        'PASSWORD' : '0feded4a161ee892778f01ac52702ea32901efdc61c5d4ce9ce2ac7dc9750829',
+        'HOST' : 'ec2-174-129-41-23.compute-1.amazonaws.com',
+        'PORT' : '5432'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
