@@ -73,26 +73,32 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'nwhl_fantasy_app.wsgi.application'
 
+# print('\n\n\n\n\n\n\n\n\n\n\n' + str(os.environ['DATABASE_URL']) + '\n\n\n\n\n\n\n\n\n\n')
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd3nrn3nrmve4us',
-        'USER': 'dhqppbohhywbaj' ,
-        'PASSWORD' : '0feded4a161ee892778f01ac52702ea32901efdc61c5d4ce9ce2ac7dc9750829',
-        'HOST' : 'ec2-174-129-41-23.compute-1.amazonaws.com',
-        'PORT' : '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'd3nrn3nrmve4us',
+#         'USER': 'dhqppbohhywbaj' ,
+#         'PASSWORD' : '0feded4a161ee892778f01ac52702ea32901efdc61c5d4ce9ce2ac7dc9750829',
+#         'HOST' : 'ec2-174-129-41-23.compute-1.amazonaws.com',
+#         'PORT' : '5432',
+#     }
+# }
+
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
+
+# DATABASES['default'].update(dj_database_url.config(default=os.environ["DATABASE_URL"]))
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
