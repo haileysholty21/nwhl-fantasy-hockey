@@ -25,9 +25,6 @@ $ env\Scripts\activate
 
 $ pip install -r requirements.txt
 
--- dont run this yet, I haven't tried it out, and you can run locally without it -- $ createdb nwhl_fantasy_hockey
-(make sure postgresql is running before you do the above command, otherwise it will error)
-
 
 $ python manage.py migrate
 $ python manage.py collectstatic
@@ -59,6 +56,14 @@ $ git push origin master
 ## Making UI Changes
 
 The main HTML file (index.html) is in nwhl_fantasy/templates, and any additional html files should be added to that same templates folder. In your HTML files, when you want to refer to your CSS file(s) or any images, which should be added/kept in nwhl_fantasy_app/static (or nwhl_fantasy_app/static/images for images), the href should be formatted like href="{% static 'fantasyNWHL.css' %}" (example in the index.html file). As long as <% load static %> is included inside the opening HTML tag, Django will be able to find your CSS file or image and render it.
+
+## Making Database Changes
+
+To make any database changes, you have to have postgres installed locally. If you want to make a small change, you can run 
+```sh
+$ heroku pg:psql
+```
+which will open a command line where you can write any query you want. For larger changes, you'll probably want to connect to our database through your local database management tool (I use Postico on my Mac, Colleen uses pgAdmin on her PC) using the database credentials listed in Resources -> [our database] -> Settings -> Database Credentials. Then you can open a query window in your management tool and do more complicated queries. 
 
 
 ## Documentation
